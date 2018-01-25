@@ -1,0 +1,10 @@
+C:\CSharp\Learning&Practice\DbConnectivity-1\DbConnection\DbConnection\bin\Debug\DbConnection.exe.config
+C:\CSharp\Learning&Practice\DbConnectivity-1\DbConnection\DbConnection\bin\Debug\DbConnection.exe
+C:\CSharp\Learning&Practice\DbConnectivity-1\DbConnection\DbConnection\bin\Debug\DbConnection.pdb
+C:\CSharp\Learning&Practice\DbConnectivity-1\DbConnection\DbConnection\obj\Debug\DbConnection.csprojResolveAssemblyReference.cache
+C:\CSharp\Learning&Practice\DbConnectivity-1\DbConnection\DbConnection\obj\Debug\DbConnection.Form1.resources
+C:\CSharp\Learning&Practice\DbConnectivity-1\DbConnection\DbConnection\obj\Debug\DbConnection.Properties.Resources.resources
+C:\CSharp\Learning&Practice\DbConnectivity-1\DbConnection\DbConnection\obj\Debug\DbConnection.csproj.GenerateResource.Cache
+C:\CSharp\Learning&Practice\DbConnectivity-1\DbConnection\DbConnection\obj\Debug\DbConnection.csproj.CoreCompileInputs.cache
+C:\CSharp\Learning&Practice\DbConnectivity-1\DbConnection\DbConnection\obj\Debug\DbConnection.exe
+C:\CSharp\Learning&Practice\DbConnectivity-1\DbConnection\DbConnection\obj\Debug\DbConnection.pdb
