@@ -12,49 +12,43 @@ namespace DbConnection
 {
     public partial class Form1 : Form
     {
+        DDL obj = new DDL();
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
+        
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            obj.DDLCountry(cmbCountry);
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void cmbCountry_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
+                int COUNTRY_ID = Convert.ToInt32(cmbCountry.SelectedValue);
+                obj.DDLProvince(cmbProvince, COUNTRY_ID);
+            }
+            catch (Exception)
+            {
 
+            }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void cmbProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
+                int PROVINCE_ID = Convert.ToInt32(cmbProvince.SelectedValue);
+                obj.DDLCity(cmbCity, PROVINCE_ID);
+            }
+            catch (Exception)
+            {
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
+            }
         }
     }
 }

@@ -45,10 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connect.cs" />
+    <Compile Include="DbConnection_1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbConnection_1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DDL.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -65,6 +72,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DbConnection_1DataSet.xsc">
+      <DependentUpon>DbConnection_1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DbConnection_1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbConnection_1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbConnection_1DataSet.xss">
+      <DependentUpon>DbConnection_1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Connect.datasource" />
+    <None Include="Properties\DataSources\DbConnection.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\DbConnection.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\DDL.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

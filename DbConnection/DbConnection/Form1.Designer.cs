@@ -39,7 +39,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.cmbCity = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.cmbState = new System.Windows.Forms.ComboBox();
+            this.cmbProvince = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.rbtnFemale = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
@@ -103,7 +103,7 @@
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.cmbCity);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.cmbState);
+            this.panel2.Controls.Add(this.cmbProvince);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.rbtnFemale);
             this.panel2.Controls.Add(this.label8);
@@ -196,17 +196,18 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(418, 150);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 16);
+            this.label10.Size = new System.Drawing.Size(64, 16);
             this.label10.TabIndex = 50;
-            this.label10.Text = "State:";
+            this.label10.Text = "Province:";
             // 
-            // cmbState
+            // cmbProvince
             // 
-            this.cmbState.FormattingEnabled = true;
-            this.cmbState.Location = new System.Drawing.Point(551, 145);
-            this.cmbState.Name = "cmbState";
-            this.cmbState.Size = new System.Drawing.Size(198, 21);
-            this.cmbState.TabIndex = 49;
+            this.cmbProvince.FormattingEnabled = true;
+            this.cmbProvince.Location = new System.Drawing.Point(551, 145);
+            this.cmbProvince.Name = "cmbProvince";
+            this.cmbProvince.Size = new System.Drawing.Size(198, 21);
+            this.cmbProvince.TabIndex = 49;
+            this.cmbProvince.SelectedIndexChanged += new System.EventHandler(this.cmbProvince_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -387,6 +388,7 @@
             this.cmbCountry.Name = "cmbCountry";
             this.cmbCountry.Size = new System.Drawing.Size(198, 21);
             this.cmbCountry.TabIndex = 30;
+            this.cmbCountry.SelectedIndexChanged += new System.EventHandler(this.cmbCountry_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -411,6 +413,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -432,7 +435,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cmbCity;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cmbState;
+        private System.Windows.Forms.ComboBox cmbProvince;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RadioButton rbtnFemale;
         private System.Windows.Forms.Label label8;

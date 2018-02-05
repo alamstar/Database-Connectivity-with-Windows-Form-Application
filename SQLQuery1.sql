@@ -69,3 +69,28 @@ SELECT * FROM FORM;
 INSERT INTO FORM
 VALUES (('MOHD NAVED'), ('ALAM'), ('ZIA'), ('ALAM'), ('MALE'), ('02-10-1987'), ('alam00star@gmail.com'), ('9971863812'), ('ZAKIR NAGAR, OLKHLA'), (11), (3), (1)),
        (('CALRKE'), ('KENT'), ('JONATHAN'), ('KENT'), ('MALE'), ('01-01-1930'), ('clarke.kent@dailyplanet.com'), ('1234567890'), ('ABCDE, XYZ'), (24), (6), (2));
+
+--APPLYING INNER JOIN TO DISPLAY THE VALUES OF THE CITY, PROVINCE AND COUNTRY IDs--
+
+SELECT FORM.FORM_ID, FORM.FIRST_NAME, FORM.LAST_NAME, FORM.FATHER_FIRST_NAME, FORM.FATHER_LAST_NAME, FORM.SEX, FORM.DATE_OF_BIRTH, FORM.EMAIL, FORM.MOBILE, FORM.MAILING_ADDRESS, CITY.CITY_NAME, PROVINCE.PROVINCE_NAME, COUNTRY.COUNTRY_NAME
+FROM FORM
+INNER JOIN CITY
+ON
+FORM.CITY_ID_2 = CITY.CITY_ID
+INNER JOIN PROVINCE
+ON
+FORM.PROVINCE_ID_2 = PROVINCE.PROVINCE_ID
+INNER JOIN COUNTRY
+ON
+FORM.COUNTRY_ID_2 = COUNTRY.COUNTRY_ID
+
+	--Inner Join Syntax:-
+	--  - SELECT column_name(s)
+	--    FROM table1
+	--    INNER JOIN table2 ON table1.column_name = table2.column_name;
+	
+	--The INNER JOIN keyword selects records that have matching values in both tables.
+	-- -The INNER JOIN keyword selects all rows from both tables as long as there is a match between the columns. 
+	-- -If there are records in the "Orders" table that do not have matches in "Customers", 
+	--  these orders will not be shown.
+
