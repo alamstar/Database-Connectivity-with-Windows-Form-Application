@@ -37,9 +37,9 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.cmbCity = new System.Windows.Forms.ComboBox();
+            this.CmbCity = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.cmbProvince = new System.Windows.Forms.ComboBox();
+            this.CmbProvince = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.rbtnFemale = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.btnInsert = new System.Windows.Forms.Button();
             this.rbtnMale = new System.Windows.Forms.RadioButton();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.cmbCountry = new System.Windows.Forms.ComboBox();
+            this.CmbCountry = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -101,9 +101,9 @@
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.btnUpdate);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.cmbCity);
+            this.panel2.Controls.Add(this.CmbCity);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.cmbProvince);
+            this.panel2.Controls.Add(this.CmbProvince);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.rbtnFemale);
             this.panel2.Controls.Add(this.label8);
@@ -122,7 +122,7 @@
             this.panel2.Controls.Add(this.btnInsert);
             this.panel2.Controls.Add(this.rbtnMale);
             this.panel2.Controls.Add(this.txtName);
-            this.panel2.Controls.Add(this.cmbCountry);
+            this.panel2.Controls.Add(this.CmbCountry);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(0, 52);
             this.panel2.Name = "panel2";
@@ -182,13 +182,13 @@
             this.label11.TabIndex = 52;
             this.label11.Text = "City:";
             // 
-            // cmbCity
+            // CmbCity
             // 
-            this.cmbCity.FormattingEnabled = true;
-            this.cmbCity.Location = new System.Drawing.Point(178, 145);
-            this.cmbCity.Name = "cmbCity";
-            this.cmbCity.Size = new System.Drawing.Size(198, 21);
-            this.cmbCity.TabIndex = 51;
+            this.CmbCity.FormattingEnabled = true;
+            this.CmbCity.Location = new System.Drawing.Point(178, 145);
+            this.CmbCity.Name = "CmbCity";
+            this.CmbCity.Size = new System.Drawing.Size(198, 21);
+            this.CmbCity.TabIndex = 51;
             // 
             // label10
             // 
@@ -200,14 +200,14 @@
             this.label10.TabIndex = 50;
             this.label10.Text = "Province:";
             // 
-            // cmbProvince
+            // CmbProvince
             // 
-            this.cmbProvince.FormattingEnabled = true;
-            this.cmbProvince.Location = new System.Drawing.Point(551, 145);
-            this.cmbProvince.Name = "cmbProvince";
-            this.cmbProvince.Size = new System.Drawing.Size(198, 21);
-            this.cmbProvince.TabIndex = 49;
-            this.cmbProvince.SelectedIndexChanged += new System.EventHandler(this.cmbProvince_SelectedIndexChanged);
+            this.CmbProvince.FormattingEnabled = true;
+            this.CmbProvince.Location = new System.Drawing.Point(551, 145);
+            this.CmbProvince.Name = "CmbProvince";
+            this.CmbProvince.Size = new System.Drawing.Size(198, 21);
+            this.CmbProvince.TabIndex = 49;
+            this.CmbProvince.SelectedIndexChanged += new System.EventHandler(this.CmbProvince_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -360,6 +360,7 @@
             this.btnInsert.TabIndex = 33;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = false;
+            this.btnInsert.Click += new System.EventHandler(this.BtnInsert_Click);
             // 
             // rbtnMale
             // 
@@ -381,14 +382,14 @@
             this.txtName.Size = new System.Drawing.Size(198, 20);
             this.txtName.TabIndex = 31;
             // 
-            // cmbCountry
+            // CmbCountry
             // 
-            this.cmbCountry.FormattingEnabled = true;
-            this.cmbCountry.Location = new System.Drawing.Point(178, 172);
-            this.cmbCountry.Name = "cmbCountry";
-            this.cmbCountry.Size = new System.Drawing.Size(198, 21);
-            this.cmbCountry.TabIndex = 30;
-            this.cmbCountry.SelectedIndexChanged += new System.EventHandler(this.cmbCountry_SelectedIndexChanged);
+            this.CmbCountry.FormattingEnabled = true;
+            this.CmbCountry.Location = new System.Drawing.Point(178, 172);
+            this.CmbCountry.Name = "CmbCountry";
+            this.CmbCountry.Size = new System.Drawing.Size(198, 21);
+            this.CmbCountry.TabIndex = 30;
+            this.CmbCountry.SelectedIndexChanged += new System.EventHandler(this.CmbCountry_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -433,9 +434,9 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cmbCity;
+        private System.Windows.Forms.ComboBox CmbCity;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cmbProvince;
+        private System.Windows.Forms.ComboBox CmbProvince;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RadioButton rbtnFemale;
         private System.Windows.Forms.Label label8;
@@ -454,7 +455,7 @@
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.RadioButton rbtnMale;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.ComboBox cmbCountry;
+        private System.Windows.Forms.ComboBox CmbCountry;
         private System.Windows.Forms.Label label1;
     }
 }

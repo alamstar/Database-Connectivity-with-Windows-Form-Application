@@ -11,7 +11,7 @@ namespace DbConnection
 {
     class DDL
     {
-        //SqlCommand cmd;
+        SqlCommand cmd;
         SqlDataAdapter adp;
         DataTable dt;
         Connect conn;
@@ -77,6 +77,33 @@ namespace DbConnection
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        public string Insert(string FIRST_NAME, string LAST_NAME, string FATHER_FIRST_NAME, string FATHER_LAST_NAME, string SEX, string DATE_OF_BIRTH, string EMAIL, string MOBILE, string MAILING_ADDRESS, int CITY_ID, int PROVINCE_ID, int COUNTRY_ID)
+        {
+            string msg = "";
+            try
+            {
+                if(FIRST_NAME != null && LAST_NAME != null && FATHER_FIRST_NAME != null && FATHER_LAST_NAME != null && SEX != null && DATE_OF_BIRTH != null && EMAIL != null && MOBILE != null && MAILING_ADDRESS != null && CITY_ID != 0 && PROVINCE_ID != 0 && COUNTRY_ID != 0)
+                {
+                    cmd = new SqlCommand("INSERT INTO FORM VALUES('" + FIRST_NAME + "', '" + LAST_NAME + "', '" + FATHER_FIRST_NAME + "', '" + FATHER_LAST_NAME + "','" + SEX + "', '" + DATE_OF_BIRTH + "','" + EMAIL + "', '" + MOBILE + "','" + MAILING_ADDRESS + "', '" + CITY_ID + "','" + PROVINCE_ID + "', '" + COUNTRY_ID + "')", conn.OpenConn());
+
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        msg = "Record Entered Successfully.";
+                    }
+
+                    else
+                    {
+                        msg = "Please enter the values.";
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return msg;
         }
     }
 }

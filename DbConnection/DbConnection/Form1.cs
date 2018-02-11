@@ -18,19 +18,19 @@ namespace DbConnection
             InitializeComponent();
         }
 
-        
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            obj.DDLCountry(cmbCountry);
+            obj.DDLCountry(CmbCountry);
         }
 
-        private void cmbCountry_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbCountry_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                int COUNTRY_ID = Convert.ToInt32(cmbCountry.SelectedValue);
-                obj.DDLProvince(cmbProvince, COUNTRY_ID);
+                int COUNTRY_ID = Convert.ToInt32(CmbCountry.SelectedValue);
+                obj.DDLProvince(CmbProvince, COUNTRY_ID);
             }
             catch (Exception)
             {
@@ -38,14 +38,44 @@ namespace DbConnection
             }
         }
 
-        private void cmbProvince_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                int PROVINCE_ID = Convert.ToInt32(cmbProvince.SelectedValue);
-                obj.DDLCity(cmbCity, PROVINCE_ID);
+                int PROVINCE_ID = Convert.ToInt32(CmbProvince.SelectedValue);
+                obj.DDLCity(CmbCity, PROVINCE_ID);
             }
             catch (Exception)
+            {
+
+            }
+        }
+
+        private void BtnInsert_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string FIRST_NAME = txtName.Text;
+                string LAST_NAME = txtLName.Text;
+                string FATHER_FIRST_NAME = txtFName.Text;
+                string FATHER_LAST_NAME = txtFLName.Text;
+                string SEX = "Female";
+                if (rbtnMale.Checked)
+                {
+                    SEX = "Male";
+                }
+                string DATE_OF_BIRTH = dateTimePicker1.Text;
+                string EMAIL = txtEmail.Text;
+                string MOBILE = txtPhone.Text;
+                string MAILING_ADDRESS = txtAddress.Text;
+                int CITY_ID = Convert.ToInt32(CmbCity.SelectedValue);
+                int PROVINCE_ID = Convert.ToInt32(CmbProvince.SelectedValue);
+                int COUNTRY_ID = Convert.ToInt32(CmbCountry.SelectedValue);
+
+                MessageBox.Show(obj.Insert(FIRST_NAME, LAST_NAME, FATHER_FIRST_NAME, FATHER_LAST_NAME, SEX, DATE_OF_BIRTH, EMAIL, MOBILE, MAILING_ADDRESS, CITY_ID, PROVINCE_ID, COUNTRY_ID));
+
+            }
+            catch(Exception)
             {
 
             }

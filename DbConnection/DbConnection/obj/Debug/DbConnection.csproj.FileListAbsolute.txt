@@ -15,6 +15,6 @@ C:\CSharp\DbConnectivity-1\DbConnection\DbConnection\obj\Debug\DbConnection.cspr
 C:\CSharp\DbConnectivity-1\DbConnection\DbConnection\obj\Debug\DbConnection.Form1.resources
 C:\CSharp\DbConnectivity-1\DbConnection\DbConnection\obj\Debug\DbConnection.Properties.Resources.resources
 C:\CSharp\DbConnectivity-1\DbConnection\DbConnection\obj\Debug\DbConnection.csproj.GenerateResource.Cache
-C:\CSharp\DbConnectivity-1\DbConnection\DbConnection\obj\Debug\DbConnection.csproj.CoreCompileInputs.cache
 C:\CSharp\DbConnectivity-1\DbConnection\DbConnection\obj\Debug\DbConnection.exe
 C:\CSharp\DbConnectivity-1\DbConnection\DbConnection\obj\Debug\DbConnection.pdb
+C:\CSharp\DbConnectivity-1\DbConnection\DbConnection\obj\Debug\DbConnection.csproj.CoreCompileInputs.cache
