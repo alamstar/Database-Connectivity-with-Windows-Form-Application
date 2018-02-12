@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.BtnDelete = new System.Windows.Forms.Button();
+            this.BtnUpdate = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.CmbCity = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -60,18 +60,19 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.CmbCountry = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(82, 305);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(673, 225);
-            this.dataGridView1.TabIndex = 5;
+            this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView1.Location = new System.Drawing.Point(82, 305);
+            this.DataGridView1.Name = "DataGridView1";
+            this.DataGridView1.Size = new System.Drawing.Size(673, 225);
+            this.DataGridView1.TabIndex = 0;
+            this.DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             // 
             // panel1
             // 
@@ -98,8 +99,8 @@
             this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.btnDelete);
-            this.panel2.Controls.Add(this.btnUpdate);
+            this.panel2.Controls.Add(this.BtnDelete);
+            this.panel2.Controls.Add(this.BtnUpdate);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.CmbCity);
             this.panel2.Controls.Add(this.label10);
@@ -131,12 +132,13 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "dd-mm-yyyy";
+            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(549, 70);
+            this.dateTimePicker1.Location = new System.Drawing.Point(551, 70);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 56;
+            this.dateTimePicker1.Size = new System.Drawing.Size(198, 20);
+            this.dateTimePicker1.TabIndex = 28;
+            this.dateTimePicker1.Value = new System.DateTime(2018, 2, 13, 0, 0, 0, 0);
             // 
             // label12
             // 
@@ -145,32 +147,34 @@
             this.label12.Location = new System.Drawing.Point(418, 74);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(83, 16);
-            this.label12.TabIndex = 55;
+            this.label12.TabIndex = 11;
             this.label12.Text = "Date of Birth:";
             // 
-            // btnDelete
+            // BtnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(755, 212);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 32);
-            this.btnDelete.TabIndex = 54;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.BtnDelete.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDelete.Location = new System.Drawing.Point(755, 212);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(75, 32);
+            this.BtnDelete.TabIndex = 27;
+            this.BtnDelete.Text = "Delete";
+            this.BtnDelete.UseVisualStyleBackColor = false;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // btnUpdate
+            // BtnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(674, 212);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 32);
-            this.btnUpdate.TabIndex = 53;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.BtnUpdate.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BtnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUpdate.Location = new System.Drawing.Point(674, 212);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(75, 32);
+            this.BtnUpdate.TabIndex = 26;
+            this.BtnUpdate.Text = "Update";
+            this.BtnUpdate.UseVisualStyleBackColor = false;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // label11
             // 
@@ -179,7 +183,7 @@
             this.label11.Location = new System.Drawing.Point(73, 150);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(33, 16);
-            this.label11.TabIndex = 52;
+            this.label11.TabIndex = 23;
             this.label11.Text = "City:";
             // 
             // CmbCity
@@ -188,7 +192,7 @@
             this.CmbCity.Location = new System.Drawing.Point(178, 145);
             this.CmbCity.Name = "CmbCity";
             this.CmbCity.Size = new System.Drawing.Size(198, 21);
-            this.CmbCity.TabIndex = 51;
+            this.CmbCity.TabIndex = 24;
             // 
             // label10
             // 
@@ -197,7 +201,7 @@
             this.label10.Location = new System.Drawing.Point(418, 150);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 16);
-            this.label10.TabIndex = 50;
+            this.label10.TabIndex = 21;
             this.label10.Text = "Province:";
             // 
             // CmbProvince
@@ -206,7 +210,7 @@
             this.CmbProvince.Location = new System.Drawing.Point(551, 145);
             this.CmbProvince.Name = "CmbProvince";
             this.CmbProvince.Size = new System.Drawing.Size(198, 21);
-            this.CmbProvince.TabIndex = 49;
+            this.CmbProvince.TabIndex = 22;
             this.CmbProvince.SelectedIndexChanged += new System.EventHandler(this.CmbProvince_SelectedIndexChanged);
             // 
             // label9
@@ -216,7 +220,7 @@
             this.label9.Location = new System.Drawing.Point(73, 177);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 16);
-            this.label9.TabIndex = 48;
+            this.label9.TabIndex = 19;
             this.label9.Text = "Country:";
             // 
             // rbtnFemale
@@ -226,7 +230,7 @@
             this.rbtnFemale.Location = new System.Drawing.Point(267, 70);
             this.rbtnFemale.Name = "rbtnFemale";
             this.rbtnFemale.Size = new System.Drawing.Size(72, 20);
-            this.rbtnFemale.TabIndex = 47;
+            this.rbtnFemale.TabIndex = 10;
             this.rbtnFemale.TabStop = true;
             this.rbtnFemale.Text = "Female";
             this.rbtnFemale.UseVisualStyleBackColor = true;
@@ -238,7 +242,7 @@
             this.label8.Location = new System.Drawing.Point(73, 72);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(34, 16);
-            this.label8.TabIndex = 46;
+            this.label8.TabIndex = 8;
             this.label8.Text = "Sex:";
             // 
             // txtPhone
@@ -247,7 +251,7 @@
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(198, 20);
-            this.txtPhone.TabIndex = 45;
+            this.txtPhone.TabIndex = 16;
             // 
             // label6
             // 
@@ -256,7 +260,7 @@
             this.label6.Location = new System.Drawing.Point(418, 98);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 16);
-            this.label6.TabIndex = 44;
+            this.label6.TabIndex = 15;
             this.label6.Text = "Phone:";
             // 
             // txtEmail
@@ -265,7 +269,7 @@
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(198, 20);
-            this.txtEmail.TabIndex = 43;
+            this.txtEmail.TabIndex = 14;
             // 
             // label7
             // 
@@ -274,7 +278,7 @@
             this.label7.Location = new System.Drawing.Point(73, 98);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 16);
-            this.label7.TabIndex = 42;
+            this.label7.TabIndex = 13;
             this.label7.Text = "Email:";
             // 
             // txtAddress
@@ -283,7 +287,7 @@
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(571, 20);
-            this.txtAddress.TabIndex = 41;
+            this.txtAddress.TabIndex = 18;
             // 
             // label5
             // 
@@ -292,7 +296,7 @@
             this.label5.Location = new System.Drawing.Point(73, 124);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 16);
-            this.label5.TabIndex = 40;
+            this.label5.TabIndex = 17;
             this.label5.Text = "Address:";
             // 
             // txtFLName
@@ -301,7 +305,7 @@
             this.txtFLName.Multiline = true;
             this.txtFLName.Name = "txtFLName";
             this.txtFLName.Size = new System.Drawing.Size(198, 20);
-            this.txtFLName.TabIndex = 39;
+            this.txtFLName.TabIndex = 7;
             // 
             // label3
             // 
@@ -310,7 +314,7 @@
             this.label3.Location = new System.Drawing.Point(418, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 16);
-            this.label3.TabIndex = 38;
+            this.label3.TabIndex = 6;
             this.label3.Text = "Father\'s Last Name:";
             // 
             // txtFName
@@ -319,7 +323,7 @@
             this.txtFName.Multiline = true;
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(198, 20);
-            this.txtFName.TabIndex = 37;
+            this.txtFName.TabIndex = 5;
             // 
             // label4
             // 
@@ -328,7 +332,7 @@
             this.label4.Location = new System.Drawing.Point(73, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 16);
-            this.label4.TabIndex = 36;
+            this.label4.TabIndex = 4;
             this.label4.Text = "Father\'s Name:";
             // 
             // txtLName
@@ -337,7 +341,7 @@
             this.txtLName.Multiline = true;
             this.txtLName.Name = "txtLName";
             this.txtLName.Size = new System.Drawing.Size(198, 20);
-            this.txtLName.TabIndex = 35;
+            this.txtLName.TabIndex = 3;
             // 
             // label2
             // 
@@ -346,7 +350,7 @@
             this.label2.Location = new System.Drawing.Point(418, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 16);
-            this.label2.TabIndex = 34;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Last Name:";
             // 
             // btnInsert
@@ -357,7 +361,7 @@
             this.btnInsert.Location = new System.Drawing.Point(593, 212);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(75, 32);
-            this.btnInsert.TabIndex = 33;
+            this.btnInsert.TabIndex = 25;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.BtnInsert_Click);
@@ -369,7 +373,7 @@
             this.rbtnMale.Location = new System.Drawing.Point(178, 70);
             this.rbtnMale.Name = "rbtnMale";
             this.rbtnMale.Size = new System.Drawing.Size(56, 20);
-            this.rbtnMale.TabIndex = 32;
+            this.rbtnMale.TabIndex = 9;
             this.rbtnMale.TabStop = true;
             this.rbtnMale.Text = "Male";
             this.rbtnMale.UseVisualStyleBackColor = true;
@@ -380,7 +384,7 @@
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(198, 20);
-            this.txtName.TabIndex = 31;
+            this.txtName.TabIndex = 1;
             // 
             // CmbCountry
             // 
@@ -388,7 +392,7 @@
             this.CmbCountry.Location = new System.Drawing.Point(178, 172);
             this.CmbCountry.Name = "CmbCountry";
             this.CmbCountry.Size = new System.Drawing.Size(198, 21);
-            this.CmbCountry.TabIndex = 30;
+            this.CmbCountry.TabIndex = 20;
             this.CmbCountry.SelectedIndexChanged += new System.EventHandler(this.CmbCountry_SelectedIndexChanged);
             // 
             // label1
@@ -398,7 +402,7 @@
             this.label1.Location = new System.Drawing.Point(73, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 16);
-            this.label1.TabIndex = 29;
+            this.label1.TabIndex = 0;
             this.label1.Text = "First Name:";
             // 
             // Form1
@@ -409,13 +413,13 @@
             this.ClientSize = new System.Drawing.Size(847, 531);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DataGridView1);
             this.Cursor = System.Windows.Forms.Cursors.No;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -425,14 +429,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button BtnDelete;
+        private System.Windows.Forms.Button BtnUpdate;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox CmbCity;
         private System.Windows.Forms.Label label10;
@@ -457,6 +460,7 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.ComboBox CmbCountry;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 
